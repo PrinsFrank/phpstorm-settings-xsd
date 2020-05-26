@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="code_scheme">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="option" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:attribute name="value"/>
+                        <xs:attribute name="name">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="AUTODETECT_INDENTS"/>
+                                    <xs:enumeration value="LINE_SEPARATOR"/>
+                                    <xs:enumeration value="RIGHT_MARGIN"/>
+                                    <xs:enumeration value="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN"/>
+                                    <xs:enumeration value="FORMATTER_TAGS_ENABLED"/>
+                                    <xs:enumeration value="FORMATTER_TAGS_ACCEPT_REGEXP"/>
+                                    <xs:enumeration value="SOFT_MARGINS"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:attribute>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="PHPCodeStyleSettings">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="option" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:attribute name="value"/>
+                                    <xs:attribute name="name">
+                                        <xs:simpleType>
+                                            <xs:restriction base="xs:string">
+                                                <xs:enumeration value="INDENT_CODE_IN_PHP_TAGS"/>
+                                                <xs:enumeration value="ALIGN_KEY_VALUE_PAIRS"/>
+                                                <xs:enumeration value="ALIGN_ASSIGNMENTS"/>
+                                                <xs:enumeration value="ALIGN_INLINE_COMMENTS"/>
+                                                <xs:enumeration value="CONCAT_SPACES"/>
+                                                <xs:enumeration value="ANONYMOUS_BRACE_STYLE"/>
+                                                <xs:enumeration value="GROUP_USE_WRAP"/>
+                                                <xs:enumeration value="KEEP_RPAREN_AND_LBRACE_ON_ONE_LINE"/>
+                                                <xs:enumeration value="SPACES_AROUND_VAR_WITHIN_BRACKETS"/>
+                                                <xs:enumeration value="ALIGN_CLASS_CONSTANTS"/>
+                                                <xs:enumeration value="SPACE_BEFORE_UNARY_NOT"/>
+                                                <xs:enumeration value="SPACE_AFTER_UNARY_NOT"/>
+                                                <xs:enumeration value="SPACE_BETWEEN_TERNARY_QUEST_AND_COLON"/>
+                                                <xs:enumeration value="SPACES_WITHIN_SHORT_ECHO_TAGS"/>
+                                                <xs:enumeration value="SPACE_BEFORE_CLOSURE_LEFT_PARENTHESIS"/>
+                                                <xs:enumeration value="SPACE_BEFORE_SHORT_CLOSURE_LEFT_PARENTHESIS"/>
+                                                <xs:enumeration value="NEW_LINE_AFTER_PHP_OPENING_TAG"/>
+                                                <xs:enumeration value="SPACES_AROUND_ARROW"/>
+                                                <xs:enumeration value="SPACES_AROUND_NULL_COALESCE_OPERATOR"/>
+                                                <xs:enumeration value="SPACE_AROUND_ASSIGNMENT_IN_DECLARE"/>
+                                                <xs:enumeration value="SPACE_BEFORE_COLON_IN_RETURN_TYPE"/>
+                                                <xs:enumeration value="SPACE_AFTER_COLON_IN_RETURN_TYPE"/>
+                                                <xs:enumeration value="RETURN_TYPE_ON_NEW_LINE"/>
+                                                <xs:enumeration value="MULTILINE_CHAINED_CALLS_SEMICOLON_ON_NEW_LINE"/>
+                                                <xs:enumeration value="NAMESPACE_BRACE_STYLE"/>
+                                                <xs:enumeration value="PLACE_PARENS_FOR_CONSTRUCTOR"/>
+                                                <xs:enumeration value="IF_LPAREN_ON_NEXT_LINE"/>
+                                                <xs:enumeration value="IF_RPAREN_ON_NEXT_LINE"/>
+                                            </xs:restriction>
+                                        </xs:simpleType>
+                                    </xs:attribute>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="editorconfig">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="option" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:attribute name="value"/>
+                                    <xs:attribute name="name">
+                                        <xs:simpleType>
+                                            <xs:restriction base="xs:string">
+                                                <xs:enumeration value="ENABLED"/>
+                                            </xs:restriction>
+                                        </xs:simpleType>
+                                    </xs:attribute>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="codeStyleSettings">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="option" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:attribute name="value"/>
+                                    <xs:attribute name="name">
+                                        <xs:simpleType>
+                                            <xs:restriction base="xs:string">
+                                                <xs:enumeration value="RIGHT_MARGIN"/>
+                                                <xs:enumeration value="KEEP_LINE_BREAKS"/>
+                                                <xs:enumeration value="KEEP_FIRST_COLUMN_COMMENT"/>
+                                                <xs:enumeration value="KEEP_CONTROL_STATEMENT_IN_ONE_LINE"/>
+                                                <xs:enumeration value="BRACE_STYLE"/>
+                                                <xs:enumeration value="CLASS_BRACE_STYLE"/>
+                                                <xs:enumeration value="METHOD_BRACE_STYLE"/>
+                                                <xs:enumeration value="LAMBDA_BRACE_STYLE"/>
+                                                <xs:enumeration value="ELSE_ON_NEW_LINE"/>
+                                                <xs:enumeration value="WHILE_ON_NEW_LINE"/>
+                                                <xs:enumeration value="CATCH_ON_NEW_LINE"/>
+                                                <xs:enumeration value="FINALLY_ON_NEW_LINE"/>
+                                                <xs:enumeration value="INDENT_CASE_FROM_SWITCH"/>
+                                                <xs:enumeration value="INDENT_BREAK_FROM_CASE"/>
+                                                <xs:enumeration value="SPECIAL_ELSE_IF_TREATMENT"/>
+                                                <xs:enumeration value="ALIGN_MULTILINE_CHAINED_METHODS"/>
+                                                <xs:enumeration value="ALIGN_MULTILINE_PARAMETERS"/>
+                                                <xs:enumeration value="ALIGN_MULTILINE_PARAMETERS_IN_CALLS"/>
+                                                <xs:enumeration value="ALIGN_MULTILINE_FOR"/>
+                                                <xs:enumeration value="ALIGN_MULTILINE_BINARY_OPERATION"/>
+                                                <xs:enumeration value="ALIGN_MULTILINE_TERNARY_OPERATION"/>
+                                                <xs:enumeration value="ALIGN_MULTILINE_EXTENDS_LIST"/>
+                                                <xs:enumeration value="ALIGN_MULTILINE_ARRAY_INITIALIZER_EXPRESSION"/>
+                                                <xs:enumeration value="ALIGN_GROUP_FIELD_DECLARATIONS"/>
+                                                <xs:enumeration value="SPACE_AROUND_ASSIGNMENT_OPERATORS"/>
+                                                <xs:enumeration value="SPACE_AROUND_LOGICAL_OPERATORS"/>
+                                                <xs:enumeration value="SPACE_AROUND_EQUALITY_OPERATORS"/>
+                                                <xs:enumeration value="SPACE_AROUND_RELATIONAL_OPERATORS"/>
+                                                <xs:enumeration value="SPACE_AROUND_BITWISE_OPERATORS"/>
+                                                <xs:enumeration value="SPACE_AROUND_ADDITIVE_OPERATORS"/>
+                                                <xs:enumeration value="SPACE_AROUND_MULTIPLICATIVE_OPERATORS"/>
+                                                <xs:enumeration value="SPACE_AROUND_SHIFT_OPERATORS"/>
+                                                <xs:enumeration value="SPACE_AROUND_UNARY_OPERATOR"/>
+                                                <xs:enumeration value="SPACE_AFTER_COMMA"/>
+                                                <xs:enumeration value="SPACE_BEFORE_COMMA"/>
+                                                <xs:enumeration value="SPACE_AFTER_SEMICOLON"/>
+                                                <xs:enumeration value="SPACE_BEFORE_SEMICOLON"/>
+                                                <xs:enumeration value="SPACE_WITHIN_PARENTHESES"/>
+                                                <xs:enumeration value="SPACE_WITHIN_METHOD_CALL_PARENTHESES"/>
+                                                <xs:enumeration value="SPACE_WITHIN_METHOD_PARENTHESES"/>
+                                                <xs:enumeration value="SPACE_WITHIN_IF_PARENTHESES"/>
+                                                <xs:enumeration value="SPACE_WITHIN_WHILE_PARENTHESES"/>
+                                                <xs:enumeration value="SPACE_WITHIN_FOR_PARENTHESES"/>
+                                                <xs:enumeration value="SPACE_WITHIN_CATCH_PARENTHESES"/>
+                                                <xs:enumeration value="SPACE_WITHIN_SWITCH_PARENTHESES"/>
+                                                <xs:enumeration value="SPACE_WITHIN_BRACKETS"/>
+                                                <xs:enumeration value="SPACE_WITHIN_ARRAY_INITIALIZER_BRACES"/>
+                                                <xs:enumeration value="SPACE_AFTER_TYPE_CAST"/>
+                                                <xs:enumeration value="SPACE_BEFORE_METHOD_CALL_PARENTHESES"/>
+                                                <xs:enumeration value="SPACE_BEFORE_METHOD_PARENTHESES"/>
+                                                <xs:enumeration value="SPACE_BEFORE_IF_PARENTHESES"/>
+                                                <xs:enumeration value="SPACE_BEFORE_WHILE_PARENTHESES"/>
+                                                <xs:enumeration value="SPACE_BEFORE_FOR_PARENTHESES"/>
+                                                <xs:enumeration value="SPACE_BEFORE_CATCH_PARENTHESES"/>
+                                                <xs:enumeration value="SPACE_BEFORE_SWITCH_PARENTHESES"/>
+                                                <xs:enumeration value="SPACE_BEFORE_CLASS_LBRACE"/>
+                                                <xs:enumeration value="SPACE_BEFORE_METHOD_LBRACE"/>
+                                                <xs:enumeration value="SPACE_BEFORE_IF_LBRACE"/>
+                                                <xs:enumeration value="SPACE_BEFORE_ELSE_LBRACE"/>
+                                                <xs:enumeration value="SPACE_BEFORE_WHILE_LBRACE"/>
+                                                <xs:enumeration value="SPACE_BEFORE_FOR_LBRACE"/>
+                                                <xs:enumeration value="SPACE_BEFORE_DO_LBRACE"/>
+                                                <xs:enumeration value="SPACE_BEFORE_SWITCH_LBRACE"/>
+                                                <xs:enumeration value="SPACE_BEFORE_TRY_LBRACE"/>
+                                                <xs:enumeration value="SPACE_BEFORE_CATCH_LBRACE"/>
+                                                <xs:enumeration value="SPACE_BEFORE_FINALLY_LBRACE"/>
+                                                <xs:enumeration value="SPACE_BEFORE_ARRAY_INITIALIZER_LBRACE"/>
+                                                <xs:enumeration value="SPACE_BEFORE_ELSE_KEYWORD"/>
+                                                <xs:enumeration value="SPACE_BEFORE_WHILE_KEYWORD"/>
+                                                <xs:enumeration value="SPACE_BEFORE_CATCH_KEYWORD"/>
+                                                <xs:enumeration value="SPACE_BEFORE_FINALLY_KEYWORD"/>
+                                                <xs:enumeration value="SPACE_BEFORE_QUEST"/>
+                                                <xs:enumeration value="SPACE_AFTER_QUEST"/>
+                                                <xs:enumeration value="SPACE_BEFORE_COLON"/>
+                                                <xs:enumeration value="SPACE_AFTER_COLON"/>
+                                                <xs:enumeration value="CALL_PARAMETERS_WRAP"/>
+                                                <xs:enumeration value="CALL_PARAMETERS_LPAREN_ON_NEXT_LINE"/>
+                                                <xs:enumeration value="CALL_PARAMETERS_RPAREN_ON_NEXT_LINE"/>
+                                                <xs:enumeration value="METHOD_PARAMETERS_WRAP"/>
+                                                <xs:enumeration value="METHOD_PARAMETERS_LPAREN_ON_NEXT_LINE"/>
+                                                <xs:enumeration value="METHOD_PARAMETERS_RPAREN_ON_NEXT_LINE"/>
+                                                <xs:enumeration value="EXTENDS_LIST_WRAP"/>
+                                                <xs:enumeration value="EXTENDS_KEYWORD_WRAP"/>
+                                                <xs:enumeration value="METHOD_CALL_CHAIN_WRAP"/>
+                                                <xs:enumeration value="PARENTHESES_EXPRESSION_LPAREN_WRAP"/>
+                                                <xs:enumeration value="PARENTHESES_EXPRESSION_RPAREN_WRAP"/>
+                                                <xs:enumeration value="BINARY_OPERATION_WRAP"/>
+                                                <xs:enumeration value="BINARY_OPERATION_SIGN_ON_NEXT_LINE"/>
+                                                <xs:enumeration value="TERNARY_OPERATION_WRAP"/>
+                                                <xs:enumeration value="TERNARY_OPERATION_SIGNS_ON_NEXT_LINE"/>
+                                                <xs:enumeration value="MODIFIER_LIST_WRAP"/>
+                                                <xs:enumeration value="KEEP_SIMPLE_METHODS_IN_ONE_LINE"/>
+                                                <xs:enumeration value="FOR_STATEMENT_WRAP"/>
+                                                <xs:enumeration value="FOR_STATEMENT_LPAREN_ON_NEXT_LINE"/>
+                                                <xs:enumeration value="FOR_STATEMENT_RPAREN_ON_NEXT_LINE"/>
+                                                <xs:enumeration value="ARRAY_INITIALIZER_WRAP"/>
+                                                <xs:enumeration value="ARRAY_INITIALIZER_LBRACE_ON_NEXT_LINE"/>
+                                                <xs:enumeration value="ARRAY_INITIALIZER_RBRACE_ON_NEXT_LINE"/>
+                                                <xs:enumeration value="ASSIGNMENT_WRAP"/>
+                                                <xs:enumeration value="PLACE_ASSIGNMENT_SIGN_ON_NEXT_LINE"/>
+                                                <xs:enumeration value="IF_BRACE_FORCE"/>
+                                                <xs:enumeration value="DOWHILE_BRACE_FORCE"/>
+                                                <xs:enumeration value="WHILE_BRACE_FORCE"/>
+                                                <xs:enumeration value="FOR_BRACE_FORCE"/>
+                                                <xs:enumeration value="WRAP_ON_TYPING"/>
+                                                <xs:enumeration value="SOFT_MARGINS"/>
+                                            </xs:restriction>
+                                        </xs:simpleType>
+                                    </xs:attribute>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="indentOptions">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="option" maxOccurs="unbounded">
+                                            <xs:complexType>
+                                                <xs:attribute name="value"/>
+                                                <xs:attribute name="name">
+                                                    <xs:simpleType>
+                                                        <xs:restriction base="xs:string">
+                                                            <xs:enumeration value="INDENT_SIZE"/>
+                                                            <xs:enumeration value="CONTINUATION_INDENT_SIZE"/>
+                                                            <xs:enumeration value="TAB_SIZE"/>
+                                                            <xs:enumeration value="USE_TAB_CHARACTER"/>
+                                                            <xs:enumeration value="SMART_TABS"/>
+                                                            <xs:enumeration value="KEEP_INDENTS_ON_EMPTY_LINES"/>
+                                                        </xs:restriction>
+                                                    </xs:simpleType>
+                                                </xs:attribute>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="language">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="PHP"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:attribute>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+            <xs:attribute name="name" default="Default" type="xs:string"/>
+            <xs:attribute name="version" type="xs:int"/>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
