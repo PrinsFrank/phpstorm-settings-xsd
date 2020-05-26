@@ -1,5 +1,5 @@
 # How to use
-add the following applicable scheme to the xml files. For example, for the code_scheme element, change
+Add the applicable scheme to the xml files. For example, for the code_scheme element, change:
 ```xml
 <code_scheme name="Default" version="X">
   ...
